@@ -1,0 +1,105 @@
+level02@SnowCrash:~$ ls -l
+total 12
+----r--r-- 1 flag02 level02 8302 Aug 30  2015 level02.pcap
+
+######### On my machine ########
+┌──(kali㉿kali)-[]
+└─$ scp -P 4242 level02@192.168.56.2:/home/user/level02/level02.pcap .
+	   _____                      _____               _     
+	  / ____|                    / ____|             | |    
+	 | (___  _ __   _____      _| |     _ __ __ _ ___| |__  
+	  \___ \| '_ \ / _ \ \ /\ / / |    | '__/ _` / __| '_ \ 
+	  ____) | | | | (_) \ V  V /| |____| | | (_| \__ \ | | |
+	 |_____/|_| |_|\___/ \_/\_/  \_____|_|  \__,_|___/_| |_|
+                                                        
+  Good luck & Have fun
+
+          192.168.56.2 
+level02@192.168.56.2's password: 
+level02.pcap                                                                    100% 8302   427.3KB/s   00:00
+┌──(kali㉿kali)-[]
+└─$ tcpick -C -yP -r level02.pcap
+Starting tcpick 0.2.1 at 2024-01-04 07:22 EST
+Timeout for connections is 600
+tcpick: reading from level02.pcap
+1      SYN-SENT       59.233.235.218:39247 > 59.233.235.223:12121
+1      SYN-RECEIVED   59.233.235.218:39247 > 59.233.235.223:12121
+1      ESTABLISHED    59.233.235.218:39247 > 59.233.235.223:12121
+..%
+..%
+..&..... ..#..'..$
+..&..... ..#..'..$
+.. .....#.....'.........
+.. .38400,38400....#.SodaCan:0....'..DISPLAY.SodaCan:0......xterm..
+........"........!
+........"..".....b........b.... B.
+..............................1.......!
+.."....
+.."....
+..!..........."
+........"
+..".............        ..
+.....................
+
+Linux 2.6.38-8-generic-pae (::ffff:10.1.1.2) (pts/10)
+
+..wwwbugs login: 
+l
+.l
+e
+.e
+v
+.v
+e
+.e
+l
+.l
+X
+.X
+
+.
+.
+Password: 
+f
+t
+_
+w
+a
+n
+d
+r
+.
+.
+.
+N
+D
+R
+e
+l
+.
+L
+0
+L
+
+.
+.
+.
+Login incorrect
+wwwbugs login: 
+1      FIN-WAIT-1     59.233.235.218:39247 > 59.233.235.223:12121
+1      TIME-WAIT      59.233.235.218:39247 > 59.233.235.223:12121
+1      CLOSED         59.233.235.218:39247 > 59.233.235.223:12121
+tcpick: done reading from level02.pcap
+
+95 packets captured                                                                      
+1 tcp sessions detected
+#######
+
+## Testing ft_wandrNDRelL0L but not working. I suppose there was a problem in transmitting the data
+## Tested ft_wandrel0L ft_wandreL0L ft_wandrel ft_waNDReL0L
+
+level02@SnowCrash:~$ su flag02
+Password: 
+Don't forget to launch getflag !
+flag02@SnowCrash:~$ getflag
+Check flag.Here is your token : kooda2puivaav1idi4f57q8iq

