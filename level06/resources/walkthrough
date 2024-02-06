@@ -17,7 +17,6 @@ system('getflag');
 ?>
 ########## On my machine ########
 https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex
-mettre d'autres sources
 ########
 
 level06@SnowCrash:~$ cat /tmp/flag.php
